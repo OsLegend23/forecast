@@ -1,0 +1,11 @@
+﻿@viewModel Weather.ViewModels.DefaultViewModel, Weather
+@masterPage Views/MasterPage.dotmaster
+<dot:Content ContentPlaceHolderID="MainContent">
+    <nav class="navbar navbar-light bg-light justify-content-between">
+        <a class="navbar-brand">Weather</a>
+        <form class="form-inline">
+            <dot:TextBox Text="{value: city}" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <dot:Button class="btn btn-outline-success my-2 my-sm-0" IsSubmitButton="true" Click="{command: GetWeatherInfo()}">Search</dot:Button>
+        </form>
+    </nav>
+</dot:Content>
