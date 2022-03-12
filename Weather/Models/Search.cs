@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Weather.Models
 {
-    public class Search
+    public class SearchCity
     {
         // Annotations required to validate input data in our model.
         [Required(ErrorMessage = "You must enter a city name!")]

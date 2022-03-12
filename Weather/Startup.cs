@@ -6,6 +6,7 @@ using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Hosting;
 using DotVVM.Framework.Hosting;
 using DotVVM.Framework.Routing;
+using Weather.Services;
 
 namespace Weather
 {
@@ -29,6 +30,10 @@ namespace Weather
 			services.AddAuthentication();
 
 			services.AddDotVVM<DotvvmStartup>();
+			services.AddHttpClient<WeatherService>(client =>
+            {
+				client.BaseAddress = new System.Uri("https://api.openweathermap.org/data/2.5/");
+            });
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
